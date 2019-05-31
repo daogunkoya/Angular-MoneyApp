@@ -1,0 +1,55 @@
+<div class = "col-md-12">
+  <h6>Latest Transactions</h6>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+            <!-- ['No', 'Created_at',
+            'Agent','Tcode',
+            'Sender','Receiver',
+            'Local Pay', 'C_B',
+            'Total','Amount','Status','Actions']
+            <th *ngFor = "let field of trans_fields">{{field}}</th> -->
+            <th>No</th>
+            <th>Date</th>
+            <th>Agent</th>
+            <th>Tcode</th>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Local</th>
+            <th>C_B</th>
+            <th>Total</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      <tbody>	  
+        <tr *ngFor = "let transaction of (transactionsListState | async).transactionList; let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{transaction.created_at}}</td>
+          <td>{{transaction.type}}</td>
+          <td>{{transaction.receipt_number}}</td>
+          <td>Kaleb</td>
+          <td>Mr Re</td>
+          <td>{{(transaction.amount * transaction.commission).toFixed(2)  }}</td>
+          <td>{{transaction.commission}}</td>
+          <td>{{(transaction.amount * transaction.agent_commission).toFixed(2)  }}</td>
+          <td>{{(transaction.amount + transaction.commission).toFixed(2)  }}</td>
+          <td>{{transaction.status }}</td>
+          <td>
+              <a 
+              class = "btn btn-default"
+              [routerLink] = "[ transaction.id, 'edit']"> Edit</a>
+              
+              <a 
+              class = "btn btn-default"
+              [routerLink] = "['receipt', transaction.id]"> Receipt</a>
+              
+              <a 
+              class = "btn btn-danger"
+              [routerLink] = "['transactions/edit', transaction.id]"> Delete</a>
+          </td>
+        </tr>
+  </tbody>
+</table>
+</div>

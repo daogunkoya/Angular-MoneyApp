@@ -1,0 +1,86 @@
+<h5>Edit Receivers</h5>
+  <div class="row">
+        <div class="col-md-5">
+          <div class="form-group form-group-sm">
+            <span class="text-danger">*</span>
+            <label for="fname">First Name</label> 
+            <input
+                type="text"
+                id="fname"
+                class="form-control"
+                [(ngModel)]="fname">
+          </div>
+        </div>
+        
+        <div class="col-md-5 ">
+          <div class="form-group form-group-sm">
+            <span class="text-danger">*</span>
+             <label for="lname">Last Name</label>
+             <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  [(ngModel)]="lname">
+          </div>
+        </div>
+  </div>		
+  <div class="row">	
+        <div class="col-md-5">
+          <div class="form-group form-group-sm">
+            <label for="transfer_type">Transfer Type:</label>
+                 <select class="form-control" id="transfer_type" name="transfer_type">
+                   <option value="Pick Up">Pick Up</option>
+                   <option value="Pick">Bank Account</option></select>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="form-group form-group-sm">
+            <label for="phone">Phone</label>
+            <input class="form-control" name="phone" type="text" [(ngModel)]= "phone">
+          </div>
+        </div>
+  </div>
+      
+        
+<div class="row">
+    <div class="col-md-5 col-md-offset-3">
+      <div class="form-group form-group-sm">
+          <label for="bank">Bank</label>
+            <select class="form-control" id="bank" name="bank">
+              <optgroup label="0"><option value="Keystone Bank" selected="selected">Keystone Bank</option><option value="unitys bank">unitys bank</option><option value="Skye bank">Skye bank</option><option value="Spring Bank">Spring Bank</option><option value="Stanbic Bank">Stanbic Bank</option><option value="Unity bank">Unity bank</option><option value="United Bank Of Africa">United Bank Of Africa</option><option value="Wema Bank">Wema Bank</option><option value="Zenith Bank">Zenith Bank</option><option value="Access Bank">Access Bank</option><option value="Diamond Bank">Diamond Bank</option><option value="Guaranty Trust Bank">Guaranty Trust Bank</option><option value="Enterprise Bank ">Enterprise Bank </option><option value="Eco bank">Eco bank</option><option value="First Bank">First Bank</option><option value="first city monument bank">first city monument bank</option><option value="union bank">union bank</option><option value="fidelity bank">fidelity bank</option><option value="standard charterred bank">standard charterred bank</option><option value="mainstreet ">mainstreet </option><option value="Equitoria Trust Bank">Equitoria Trust Bank</option><option value="Halifax Bank">Halifax Bank</option><option value="roke bank">roke bank</option><option value="bolis bank">bolis bank</option><option value="Nome Bank">Nome Bank</option><option value="Ramon Bank">Ramon Bank</option></optgroup></select>
+            
+          </div>
+        </div>
+
+      </div>
+      
+<div class="row"  id="actno">
+      <div class="col-md-5 col-md-offset-3" >
+        <div class="form-group form-group-sm">
+            <label for="account_number">Account Number</label>
+            <input class="form-control" name="account_number" type="text" [(ngModel)]="account_number">
+          </div>
+        </div>
+</div>
+<div class="row" id="modeId" >	
+  <div class="col-md-5 col-md-offset-3">
+      <div class="form-group form-group-sm">
+        <label for="Identity">Identity</label>
+         <select class="form-control" name="identity_type">
+           <option value="National ID" selected="selected">National ID</option>
+           <option value="Intl Passport">Intl Passport</option>
+           <option value="Drivers Lincence">Drivers Lincence</option>
+           <option value="Any type of ID">Any type of ID</option></select>	
+          </div>
+        </div>
+</div>
+      
+<div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <div class="form-group form-group-sm">
+      <br/><br/>
+      <input class="btn btn-primary btn-block" type="submit" value="Submit">
+          </div>
+        </div>
+</div>

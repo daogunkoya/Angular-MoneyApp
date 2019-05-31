@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-sm-9 col-sm-offset-1">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+          <h6>Set Rate</h6>
+      </div>
+      <div class="panel-body">
+          <form [formGroup] = "rateForm" (ngSubmit) = "onSubmit()" >
+          <div class="row">
+              <div class="col-md-12">
+                <div class="form-group form-group-sm">
+                  <label for="User">Users</label>
+                  <select 
+                     [value]="user_id"
+                        class="form-control 
+                        btn-block" formControlName="user_id"
+                        >
+                        <option [ngValue]="user.id"
+                         *ngFor="let user of users">
+                            {{user.name}}</option>
+                    </select>
+                </div>
+              </div>
+              
+            </div>
+            <br/><br/>	
+            <div class="row">
+              <div class="col-md-7">
+                <div class="form-group form-group-sm">
+                <label for="Currency Code">Currency Code</label>
+                <select 
+                      [value]="currency_id"
+                      class="form-control 
+                      btn-block" formControlName="currency_id">
+                  <option [ngValue]="currency.id"
+              *ngFor="let currency of currencies">
+                 {{currency.destination}}</option>
+         </select>
+                </div>
+              </div>
+              <div class="col-md-5" id = "income_commission" >
+                <div class="form-group form-group-sm">
+                  <label for="Rate">Rate,  &pound;1 = </label>
+                  <input class="form-control"  formControlName="rate" type="text" >
+                </div>
+              </div>
+              
+            </div>
+            <p><p>
+            <div id = "income_profit" class="row">
+              <div class="col-md-6">
+                <div class="form-group form-group-sm">
+                  <label for="Bou Rate">Bou Rate</label>
+                  <input class="form-control" formControlName='bou_rate'>
+                </div>
+              </div>
+              <div class="col-md-6">	
+                <div class="form-group form-group-sm">
+                  <label for="Sold Rate">Sold Rate</label>
+                  <input class="form-control"   formControlName="sold_rate" type="text" >
+                </div>
+              </div>
+              
+            </div>
+            <p></p>
+              
+            <p>	</p>
+            <div class="row">
+               <input class="btn btn-primary btn-lg col-md-12 btn-block" type="submit" value="Submit">
+            </div>
+            
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

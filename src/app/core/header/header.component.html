@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">MoneyApp</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+          <li routerLinkActive = "active">
+            <a href="#" routerLink = '/'>
+              Home</a></li>
+       
+          <li routerLinkActive = "active">
+            <a href="#" routerLink = 'senders'>Senders
+            </a></li>
+          
+          <li><a href="#">Send Money</a></li>
+        
+          <li  routerLinkActive = "active">
+            <a href="#" 
+              routerLink = "receivers">
+              Receivers</a></li>
+        
+          <li routerLinkActive = "active">
+            <a href="#" 
+              [routerLink] ="['transactions']"  
+              (click) ="onSelect('transactions')">
+              Transactions</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" appDropdown>
+              <a href="#"  class="dropdown-toggle" role="button">
+                    General <span class="caret">
+                </span></a>
+              <ul class="dropdown-menu">
+                <li><a routerLink = "/currencies" style = "cursor:pointer">Currency Setup</a></li>
+                <li><a routerLink = "/rates" style = "cursor:pointer">Rates</a></li>
+                <li><a routerLink = "/commissions" style = "cursor:pointer">Commissions</a></li>
+                <li><a routerLink = "/banks" style = "cursor:pointer">Bank</a></li>
+                <li><a routerLink = "/payments" style = "cursor:pointer">Payments</a></li>
+                <li><a routerLink = "/outstandings" style = "cursor:pointer">Outstanding</a></li>
+              </ul>
+            </li>
+
+        <li class="dropdown" appDropdown>
+          <a href="#" routerLink="signin" class="dropdown-toggle" role="button">
+                 My Accounts <span class="caret">
+            </span></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="signin" >Login</a></li>
+            <li><a (click)="logout()" style="cursor:pointer">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

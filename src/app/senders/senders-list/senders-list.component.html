@@ -1,0 +1,40 @@
+<h6 class="col-md-5">Senders</h6>
+<input 
+[(ngModel)]="filterString"
+class="form-goup col-md-5 col-md-offset-1"
+placeholder="Search..." >
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+        <th>No</th>
+        <th>Created</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </thead>
+  <tbody>	  
+  
+    <tr *ngFor = "let sender of (senderListState | async).senderList |filter:filterString:'name'; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{sender.name}}</td>
+      <td>{{sender.mobile}}</td>
+      <td>
+          <a 
+              [routerLink] = "['receiver/create',sender.id]">
+              New Receiver</a>
+          <a 
+              [routerLink] = "['transaction/create',sender.id]">
+              Send Money</a>
+        </td>
+      <td>
+        <a class = "btn btn-default"
+            [routerLink] = "['sender/edit',sender.id]">
+            Edit</a>
+        <a class = "btn btn-danger"
+            [routerLink] = "['sender/delete',sender.id]">
+            Del</a>
+      </td>
+      <td></td>
+    </tr>
+</tbody>
+</table>

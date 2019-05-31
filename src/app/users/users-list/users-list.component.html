@@ -1,0 +1,39 @@
+<div class="col-md-12">
+     <h6 class="col-md-5">Members</h6>
+    
+     <input 
+          [(ngModel)]="filterString"
+          class="form-goup col-md-5 col-md-offset-1"
+         placeholder="Search..." >
+    
+      
+     <div *ngIf = "!(usersListState|async)"  class="lds-hourglass"></div>
+    <table class="text-center table table-striped table-bordered tablesorter">
+      <thead>
+          <tr>
+                <th>No </th>
+                <th>Type <i class=""></i></th>
+                <th>Name <i class=""></i></th>
+                <th>Senders <i class=""></i></th>
+                <th>Transactions <i class=""></i></th>
+                <th colspan="2" class="text-center">Actions</th>
+                  
+          </tr>
+        </thead>
+      <tbody>
+                <tr *ngFor="let user of (usersListState|async).usersList | filter:filterString:'name'; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{user.type}}</td>
+                    <td>{{user.name|uppercase}}</td>
+                    <td>--</td>
+                    <td>---</td>
+                    <td>
+                      <a class="btn btn-default">Note</a>
+                      <a class="btn btn-default">status</a>
+                      <a class="btn btn-default">Edit</a>
+                      <a class="btn btn-danger">Delete</a></td>
+                </tr>
+      </tbody>
+    </table>
+  
+</div>

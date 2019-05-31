@@ -1,0 +1,12 @@
+    <div row = "row">
+          <div class= "col-md-12">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+      <div row = "row">
+          <div class= "col-md-12">
+              <a [routerLink]="['create']" class= "btn btn-primary">New Commission</a>
+              <app-commissions-list></app-commissions-list>
+          </div>
+      </div>
+  

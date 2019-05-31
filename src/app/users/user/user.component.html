@@ -1,0 +1,194 @@
+<h4>New Member</h4>
+<!-- Form -->
+		<form>
+		    <input id="user_id" name="user_id" type="hidden" value="1">
+		
+		
+			<div class="panel panel-default">
+						<div class="panel-heading">
+							
+						</div>
+					<div class="panel-body">
+						<div class="row">
+								<div class="col-md-5 col-md-offset-1">
+										<div class="form-group form-group-sm">
+											<label for="title">Title:</label>
+							                <select class="form-control" id="title" name="title"><option value="mr">Mr</option><option value="miss">Miss</option><option value="mrs">Mrs</option></select>
+										</div>
+								</div>	
+
+									
+								<div class="col-md-5">
+									<div class="form-group form-group-sm">
+									<label for="Country Destination">Country Destination</label>
+									<select class="form-control" required="required" id="currency_id" name="currency_id"><option value="1">Nigeria</option><option value="2">Albania</option><option value="3">Algeria</option><option value="6">Angola</option><option value="7">Anguilla</option><option value="13">Australia</option></select>
+									</div>
+								</div>
+																					
+						
+						</div>
+							<div class="row">																					
+								<div class="col-md-5 col-md-offset-1 ">
+									<div class="form-group form-group-sm">
+										<span class="essential">*</span>
+										<label for="fname">First Name</label>
+										<input class="form-control" name="fname" type="text" id="fname">
+													
+									</div>
+								</div>
+										
+								<div class="col-md-5">
+										<div class="form-group">
+										
+										<label for="mname">Middle Name</label>
+										<input class="form-control" name="mname" type="text" id="mname">
+													
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">																				
+								<div class="col-md-5 col-md-offset-1">
+										<div class="form-group form-group-sm">
+											<span class="essential">*</span>
+											<label for="lname">Last Name</label>
+											<input class="form-control" name="lname" type="text" id="lname">
+														
+										</div>
+								</div>
+										
+										<div class="col-md-5">
+												<label for="dob">Date Of Birth</label>
+												<span class="essential">*</span>
+												<div class="form-group input-group form-group-sm">
+													 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+													<input class="form-control" name="dob" type="date" value="09/04/2015" id="dob">
+												</div>
+										</div>
+							</div>
+							<div class="row">
+							
+									<div class="title_header">Contact Information</div>
+									
+							</div>
+							<div class="row">	
+								<div class="col-md-5 col-md-offset-1">
+									<div class="form-group form-group-sm">
+										<label for="phone">Phone Number</label>
+										<input class="form-control" name="phone" type="text" id="phone">
+														
+									</div>
+								</div>
+										
+								<div class="col-md-5">
+									<div class="form-group form-group-sm">
+										<span class="essential">*</span>
+										<label for="mobile">Mobile Number</label>
+										<input class="form-control" name="mobile" type="text" id="mobile">
+														
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">													
+								<div class="col-md-5 col-md-offset-1">
+									<div class="form-group form-group-sm">
+										<label for="email">Email</label>
+										<input class="form-control" name="email" type="text" id="email">
+														
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="form-group form-group-sm">
+										<label for="cemail">Confirm Email</label>
+										<input class="form-control" name="cemail" type="text" id="cemail">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+											<div class="title_header">Address</div>
+										<div class="col-md-7 col-md-offset-2">
+											<label for="Address Postocode">Address / Postcode</label><span class="essential">*</span>
+										</div>
+										<div class="col-md-7 col-md-offset-2">
+												<div class="form-group form-group-sm">
+													<input name = "search" type=text required name=postcode id="autocomplete" class="form-control"  onFocus="geolocate()">
+												</div>
+												
+   										 </div>
+							</div>
+											
+								
+							<br/><br/>
+							<div class="row">
+								<div class="col-md-2 col-md-offset-2">
+									<div class="form-group form-group-sm">
+										<label for="No">Number</label>
+										<input class="form-control" id="street_number" required="required" name="number" type="text">
+									</div>		
+								</div>
+								<div class="col-md-7">
+									<div class="form-group form-group-sm">
+										<label for="Address">Address</label>
+										<input class="form-control" id="route" readonly="readonly" name="address" type="text">
+									</div>		
+								</div>
+										
+										
+							</div>
+							<div class="row">
+										<div class="col-md-5 col-md-offset-1 ">
+											<div class="form-group form-group-sm">
+												<label for="postcode">Post Code</label>
+												<input class="form-control" id="postal_code" readonly="readonly" name="postcode" type="text">
+											</div>
+										</div>
+										
+										<div class="col-md-5">
+												<div class="form-group form-group-sm">
+												<label for="town">Town</label>
+												<input class="form-control" id="locality" readonly="readonly" name="town" type="text">
+											</div>
+										</div>
+							</div>																		
+							
+							<div class="row">
+										<div class="col-md-5 col-md-offset-1">
+												<div class="form-group form-group-sm">
+												<label for="county">County</label>
+												<input class="form-control" id="administrative_area_level_1" readonly="readonly" name="county" type="text">
+											</div>
+										</div>
+										
+											<div class="col-md-5">
+												<div class="form-group form-group-sm">
+												<label for="country">Country</label>
+												<input class="form-control" id="country" readonly="readonly" name="country" type="text">
+											</div>
+											</div>
+							</div>
+							
+										<div class="row">
+											<div class="col-md-5 col-md-offset-1">
+												<div class="title_header"><span class="essential">*</span>Terms And Conditions</div>
+											</div>
+										</div>
+										<div class="row">	
+												<div class="col-md-12">
+														<p><strong>Clicking the submit button you have read and accepted the <a href="terms.php">TERMS AND CONDITIONS</a> and Your information will be held securely 
+														with our data protection and management policy?</strong><p>
+												</div>																																
+										
+										</div>
+									
+										<div class="row">
+												<div class="col-md-5 col-md-offset-3 ">
+													<button class="btn btn-primary btn-block" (click) = "onSubmit()">Submit</button>					
+												</div>			
+										</div>	
+          </div>
+        </div>>
+			</form>
+
+		  

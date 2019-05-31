@@ -1,0 +1,26 @@
+<div class = "col-md-12">
+    <a routerLink="create" class="btn btn-primary">New Rate</a>
+    <div row = "row">
+        <div class= "col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-md-12">
+                <button
+                (click)="activate()"
+              class= "btn btn-primary">New Rate</button><hr>
+              <ng-template [ngIf]="show">
+                    <app-rate 
+                        [currencies] = "currencies"
+                        [users]="usersList">
+                    </app-rate>
+              </ng-template> 
+        </div>
+    </div> -->
+    <div row = "row">
+        <div class= "col-md-12">
+           <app-rates-list></app-rates-list>
+        </div>
+    </div>
+  </div>

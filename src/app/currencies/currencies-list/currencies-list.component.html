@@ -1,0 +1,35 @@
+
+<table class = "table table-bordered table-striped">
+   
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Created_At</th>
+            <th>Code</th>
+            <th>Origin</th>
+            <th>Origin Symbol</th>
+            <th>Destination</th>
+            <th>Destination Symbol</th>
+            <th>Income Type</th>
+            <th>Actions</th>
+          </tr>
+    </thead>
+   
+ <tbody>
+    <tr *ngFor = "let currency of currencies;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{currency.created_at}}</td>
+        <td>{{currency.code}}</td>
+        <td>{{currency.origin}}</td>
+        <td>{{currency.origin_symbol}}</td>
+        <td>{{currency.destination}}</td>
+        <td>{{currency.destination_symbol}}</td>
+        <td>{{currency.income_category}}</td>
+        <td>
+          <a [routerLink]="[currency.id]" class= "btn btn-default">Edit</a>
+          <a [routerLink]="[currency.id]" class= "btn btn-danger">Delete</a>
+        </td>
+    </tr>
+ </tbody> 
+  
+</table>

@@ -1,0 +1,28 @@
+<div class="sidebar"> 
+    
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+          <p class="text-center text-uppercase "><strong>		Account:Agent</strong></p>
+      </div>
+  </div>
+
+  <div class="panel-body">
+    <div id="user">
+            <p class="text-Capitalize text-center"> 
+                <strong >Todays Rate!</strong></p>
+        </div>
+        <div class="panel-border">
+            <div id="quickinfo" class="well well-lg text-danger">
+                <strong>currency = 1</strong>          
+            </div>
+        </div>
+        <div class="list-group" >
+             <a href="#" 
+                  *ngFor = "let link of links"
+                  routerLinkActive="active"
+                  routerLink="/{{link.url}}" 
+                  class="list-group-item">
+                  <i class="fa fa-{{link.image}}"></i> {{link.name}}</a>
+          </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+
+    
+      <div class="row">
+        <div class="col-md-12">
+            <app-header (featureSelected) = "onNavigate($event)"></app-header>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+            <app-sidebar></app-sidebar>
+          </div>
+          
+          <div class="col-md-9" >
+            <router-outlet></router-outlet>
+          </div>
+          <!-- <div class="col-md-9" >
+              <app-home *ngIf = "loadedFeature === 'home'"></app-home>
+              <app-transactions  *ngIf = "loadedFeature === 'transactions'"></app-transactions>
+              <app-senders  *ngIf = "loadedFeature === 'senders'"></app-senders>
+              <app-receivers  *ngIf = "loadedFeature === 'receivers'"></app-receivers>
+             <app-users  *ngIf = "loadedFeature === 'users'"></app-users>
+              <app-bank  *ngIf = "loadedFeature === 'bank'"></app-bank>
+              <app-rate  *ngIf = "loadedFeature === 'rate'"></app-rate>
+              <app-currency  *ngIf = "loadedFeature === 'currency'"></app-currency>
+              <app-commission  *ngIf = "loadedFeature === 'commission'"></app-commission>
+          </div> -->
+      </div>
+
+					

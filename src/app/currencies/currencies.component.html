@@ -1,0 +1,13 @@
+<div class = "col-md-12">
+        <div class = "row">
+            <div class="col-md-12">
+                <router-outlet></router-outlet>
+          </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-12">
+                <a [routerLink]="['create']" class= "btn btn-primary">New Currency</a>
+                <app-currencies-list [currencies] = "currencies"></app-currencies-list>
+          </div>
+        </div>
+  </div>

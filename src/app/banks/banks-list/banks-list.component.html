@@ -1,0 +1,27 @@
+<a [routerLink] = "['create']" class = "btn btn-primary">New bank</a>
+<div class="row">
+  <div class="col-md-9 col-md-offset-1">
+    <table class = "table table-bordered table-striped">
+        <thead>
+          <th>No</th>
+          <th>Banks</th>
+          <th>Types</th>
+          
+          <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let bank of banks;let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{bank.name}}</td>
+                <td>{{bank.status}}</td>
+              
+                
+                <td>
+                  <a [routerLink]="[i ,'edit']" class= "btn btn-default">Edits</a>
+                  <a (click)="deleteBank(i)" class= "btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>     
+      </table>
+      </div>
+    </div>

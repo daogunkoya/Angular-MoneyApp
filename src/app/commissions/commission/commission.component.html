@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-sm-11">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+          <h6>Set Commission</h6>
+      </div>
+      <div class="panel-body">
+          <form [formGroup]="commissionForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="form-group form-group-sm">
+                  <label for="User">Users</label>
+                  <select class="form-control"  formControlName="user_id">
+                    <option value="0">All</option>
+                    <option value="23">Tonka Rokee</option>
+                    <option value="22">Yema Doe</option>
+                    <option value="21">Mas</option>
+                    <option value="20">Hema</option>
+                    </select>
+                </div>
+              </div>
+              
+            </div>
+            <br/>
+            <div class="row">
+            <div class="col-md-12">
+                <div class="form-group form-group-sm">
+                <label for="Currency Code">Currency Code</label>
+                  <select class="form-control"  formControlName="currency_id">
+                    <option value="1">UK-NG</option>
+                    <option value="2">UK-AL</option>
+                    <option value="3">UK-DZ</option>
+                    <option value="6">UK-AO</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group form-group-sm">
+                  <label for="Amount From">Amount From</label>
+                  <input class="form-control col-md-12 btn-block" formControlName="start_at" type="text">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group form-group-sm">
+                  <label for="Amount To">Amount To</label>
+                  <input class="form-control col-md-12 btn-block"  formControlName="end_at" type="text">
+                </div>
+              </div>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group form-group-sm">
+                  <label for="Commission">Commission</label>
+                  <input class="form-control"  formControlName="value" type="text">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group form-group-sm">
+                  <label for="% For Agent">% For Agent</label>
+                  <input class="form-control"  formControlName="agent_quota" type="text" value="50">
+                </div>
+              </div>
+            </div>	
+            <p>	</p>
+            <div class="row">
+              <input class="btn btn-primary btn-lg col-md-12 btn-block" type="submit" value="Submit">
+            </div>
+
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>
